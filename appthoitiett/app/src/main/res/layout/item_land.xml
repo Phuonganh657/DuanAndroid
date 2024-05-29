@@ -36,17 +36,28 @@
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <TextView
-                android:id="@+id/textViewCation"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="2dp"
+                android:id="@+id/textViewCation1"
+                android:layout_width="142dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="1dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCation2"
+                app:layout_constraintHorizontal_bias="0.102"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLand"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewCation2"
+                android:layout_width="97dp"
+                android:layout_height="39dp"
+                android:layout_marginEnd="41dp"
                 android:text="TextView"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewLand" />
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLand"
+                tools:ignore="MissingConstraints,UnknownId" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

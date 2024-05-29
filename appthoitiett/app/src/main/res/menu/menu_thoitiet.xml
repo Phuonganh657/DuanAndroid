@@ -16,5 +16,4 @@
         android:id="@+id/navigation_chitiet"
         android:icon="@drawable/chitiet"
         android:title="Chi tiết" />
-
 </menu>

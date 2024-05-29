@@ -1,6 +1,7 @@
 package com.example.appthoitiett;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -38,10 +41,12 @@ public class LandSpaceAdapter extends RecyclerView.Adapter<LandSpaceAdapter.Item
         //Lấy đối tượng hiển thị
         LandSpace landScapeHienThi = lstData.get(position);
         //Trích thông tin
-        String caption = landScapeHienThi.getLandCation();
+        String caption1 = landScapeHienThi.getLandCation1();
+        String caption2 = landScapeHienThi.getLandCation2();
         String tenFileAnh = landScapeHienThi.getLandImageFileName();
         //đặt vào các trường thông tin của holder
-        holder.tvCaption.setText(caption);
+        holder.tvCaption1.setText(caption1);
+        holder.tvCaption2.setText(caption2);
         //đăt ảnh
         String packageName = holder.itemView.getContext().getPackageName();
         int imageID = holder.itemView.getResources().getIdentifier(tenFileAnh, "mipmap", packageName);
@@ -55,12 +60,13 @@ public class LandSpaceAdapter extends RecyclerView.Adapter<LandSpaceAdapter.Item
     }
 
     class ItemLandHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView tvCaption;
+        TextView tvCaption1, tvCaption2;
         ImageView ivLandscape;
 
         public ItemLandHolder(@NonNull View itemView) {
             super(itemView);
-            tvCaption = itemView.findViewById(R.id.textViewCation);
+            tvCaption1 = itemView.findViewById(R.id.textViewCation1);
+            tvCaption2 = itemView.findViewById(R.id.textViewCation2);
             ivLandscape = itemView.findViewById(R.id.imageViewLand);
             itemView.setOnClickListener(this);
         }
@@ -71,13 +77,18 @@ public class LandSpaceAdapter extends RecyclerView.Adapter<LandSpaceAdapter.Item
             int viTriDuocClick = getAdapterPosition();
             LandSpace phanTuDuocClick = lstData.get(viTriDuocClick);
             //bóc thông tin
-            String ten = phanTuDuocClick.getLandCation();
+            String ten = phanTuDuocClick.getLandCation1();
+            String nhietdo = phanTuDuocClick.getLandCation2();
             String tenFile = phanTuDuocClick.getLandImageFileName();
             //Toast tên
-            String chuoiThongBao = "Bạn vừa click vào: " + ten;
+            String chuoiThongBao = "Ngày mai trời nắng :"  + ten;
             Toast.makeText(v.getContext(), chuoiThongBao, Toast.LENGTH_SHORT).show();
 
         }
     }
 }
+
+
+
+
 

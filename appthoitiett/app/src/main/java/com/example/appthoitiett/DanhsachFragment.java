@@ -38,10 +38,11 @@ public class DanhsachFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         list = new ArrayList<LandSpace>();
-        list.add(new LandSpace("hanoi", "Hà Nội                                         29°  32°"));
-        list.add(new LandSpace("danang", "Tp. Đà Nẵng                                   28°  30°"));
-        list.add(new LandSpace("hcm", "Tp. Hồ Chí Minh                                  29°  30°"));
-        list.add(new LandSpace("cantho", "Tp. Cần Thơ                                   28°  32°"));
+        list.add(new LandSpace("hanoi", "Hà Nội","29°  32°"));
+        list.add(new LandSpace("danang", "Tp. Đà Nẵng"," 28°  30°"));
+        list.add(new LandSpace("hcm", "Tp. Hồ Chí Minh"," 29°  30°"));
+        list.add(new LandSpace("cantho", "Tp. Cần Thơ","28°  32°"));
+        list.add(new LandSpace("dalat", "Tp. Đà Lạt ", "29°  30°"));
 
 
     }

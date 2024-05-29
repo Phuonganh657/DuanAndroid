@@ -44,6 +44,8 @@ public class HomeFragment extends Fragment {
         list.add(new Hourly("16 giờ", 29, "cloudy1"));
         list.add(new Hourly("17 giờ", 28, "cloudy1"));
         list.add(new Hourly("18 giờ", 28, "muanang"));
+        list.add(new Hourly("19 giờ", 28, "cloudy1"));
+        list.add(new Hourly("20 giờ", 28, "cloudy1"));
 
     }
 
